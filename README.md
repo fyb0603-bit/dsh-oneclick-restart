@@ -2,6 +2,8 @@
 
 DSH 设置页「重启」分区：**检测运行中对话 → 二次确认 → 一键重启 Host / 桌面应用**。
 
+仓库：https://github.com/fyb0603-bit/dsh-oneclick-restart · 许可：MIT
+
 ## 三条硬约束的落点
 
 | 约束 | 实现 |
@@ -29,11 +31,19 @@ DSH 设置页「重启」分区：**检测运行中对话 → 二次确认 → �
 
 ## 安装
 
-1. 本目录已在 `~/.dsh/profiles/desktop/package.json` 注册：
+### 方式 A：直接从 GitHub 装
+
+```bash
+dsh plugin --profile desktop add github:fyb0603-bit/dsh-oneclick-restart
+```
+
+### 方式 B：本地开发态（link 到本机插件目录）
+
+1. 在 `~/.dsh/profiles/desktop/package.json` 里注册：
    - `dependencies["dsh-oneclick-restart"] = "link:<你的用户目录>/.dsh/plugins/dsh-oneclick-restart"`
    - `dsh.profile.bundles` 追加 `dsh-oneclick-restart`
-2. `node_modules/dsh-oneclick-restart` 是指向本目录的 junction。
-3. 首次生效需重启一次 DSH（此后就用这个按钮）。
+2. `node_modules/dsh-oneclick-restart` 指向该目录的 junction。
+3. 首次生效需重启一次 DSH —— 此后就用插件自己的按钮重启。
 
 ## 验证记录
 
