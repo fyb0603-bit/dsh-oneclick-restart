@@ -1,0 +1,8 @@
+node_modules/
+*.bak
+*.bak[0-9]*
+target.json
+settings.json
+restart.log
+.DS_Store
+Thumbs.db

@@ -1,0 +1,8 @@
+# dsh.bundle patch：插件安装时自动挂载宿主半区。
+#
+# id 用 oneclick-restart（不是包名），避免与任何既有 loader entry 撞车；
+# 客户端 slot id 同为 oneclick-restart，路由前缀 /oneclick-restart，
+# 三者一起构成"不与现有插件冲突"的边界。
+- insert:
+    - id: oneclick-restart
+      name: dsh-oneclick-restart

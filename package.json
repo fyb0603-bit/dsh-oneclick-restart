@@ -1,0 +1,49 @@
+{
+  "name": "dsh-oneclick-restart",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "DSH 设置页「重启」分区：检测运行中对话 + 二次确认 + 一键重启 Host/桌面应用",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime"
+      ]
+    },
+    "bundle": {
+      "patch": "./dsh.bundle.yml"
+    }
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "license": "MIT",
+  "author": "fyb0603-bit",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fyb0603-bit/dsh-oneclick-restart.git"
+  },
+  "homepage": "https://github.com/fyb0603-bit/dsh-oneclick-restart#readme",
+  "bugs": {
+    "url": "https://github.com/fyb0603-bit/dsh-oneclick-restart/issues"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "restart",
+    "desktop",
+    "settings"
+  ],
+  "files": [
+    "lib",
+    "dsh.bundle.yml",
+    "README.md",
+    "LICENSE"
+  ]
+}
